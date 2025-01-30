@@ -18,7 +18,7 @@ const d28 = require('./data_base/28')
 const d30 = require('./data_base/30')
 const d32 = require('./data_base/32')
 app.use(cors())
-const port = 80
+const port = 8000
 
 const getFallbackDataForVoivodeship = (code) => {
   switch(code) {
@@ -81,6 +81,10 @@ const fetchWithTimeout = (url, timeout) => {
     )
   ])
 }
+
+app.get('/', (req, res) => {
+  res.send("Hello!")
+})
 
 app.get('/api/cepik', async (req, res) => {
     const {voivodeship, from , to} = req.query
