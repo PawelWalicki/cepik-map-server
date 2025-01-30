@@ -18,7 +18,7 @@ const d28 = require('./data_base/28')
 const d30 = require('./data_base/30')
 const d32 = require('./data_base/32')
 app.use(cors())
-const port = 3030
+const port = 80
 
 const getFallbackDataForVoivodeship = (code) => {
   switch(code) {
